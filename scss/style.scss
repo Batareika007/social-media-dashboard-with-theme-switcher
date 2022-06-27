@@ -70,7 +70,7 @@ h1 {
     }
 }
 
-h2{
+h2 {
     margin-bottom: 30px;
 }
 
@@ -99,21 +99,23 @@ header {
         width: 48px;
         border-radius: 12px;
     }
+
+
 }
 
 .toggle_ball {
-    transition: all 0.8s;
+    transition: all 0.5s;
     position: absolute;
     width: 18px;
     height: 18px;
     border-radius: 50%;
     top: 3px;
-    animation-duration: 0.8s;
+    animation-duration: 0.5s;
 }
 
 .toggle__ball_dark {
     background-color: $dark;
-    left: 6px;
+    left: 4px;
     animation-name: todark;
 }
 
@@ -126,11 +128,11 @@ header {
 
 @keyframes towhite {
     0% {
-        left: 6px;
+        left: 4px;
     }
 
-    25% {
-        left: 1px;
+    70% {
+        left: 28px;
     }
 
     100% {
@@ -143,12 +145,12 @@ header {
         left: 26px;
     }
 
-    25% {
-        left: 29px
+    70% {
+        left: 2px
     }
 
     100% {
-        left: 6px;
+        left: 4px;
     }
 }
 
@@ -159,6 +161,7 @@ header {
     justify-content: center;
     gap: 30px;
     margin-bottom: 50px;
+
     &__item {
         cursor: pointer;
         text-align: center;
@@ -231,19 +234,40 @@ header {
 
 // bootom section
 
-.flex-space-between{
+.flex-space-between {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.cards__top{
+.cards__top {
     margin-bottom: 30px;
 }
 
-.cards__bottom{
+.cards__bottom {
     align-items: flex-end;
-    strong{
+    font-weight: 700;
+
+    strong {
         font-size: 33px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .header__flex {
+        div:first-child {
+            width: 100%;
+            padding-bottom: 24px;
+            margin-bottom: 24px;
+            border-bottom: 1px solid $darkText;
+        }
+
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .toggle {
+        width: 100%;
+        justify-content: space-between;
     }
 }
