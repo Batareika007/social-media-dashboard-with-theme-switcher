@@ -1,0 +1,27 @@
+// main color 
+$white : hsl(0, 0%, 100%);
+$dark: hsl(230, 17%, 14%);
+
+// Dark Theme
+$darkCardBg: hsl(232, 19%, 15%);
+$darkCardBgHover: hsl(228, 28%, 20%);
+$darkText: hsl(228, 34%, 66%);
+$darkToggle:linear-gradient(90deg, hsl(210, 78%, 56%) 0%, hsl(146, 68%, 55%) 100%);
+
+// Light Theme
+
+$whiteCardBg: hsl(225, 100%, 98%);
+$whiteCardBgHover: hsl(227, 47%, 96%);
+$whiteText: hsl(228, 12%, 44%);
+$whiteToggle: hsl(230, 22%, 74%);
+
+// borders:
+$borderFacebook: hsl(208, 92%, 53%);
+$borderTwitter: hsl(203, 89%, 53%);
+$borderInstagram: linear-gradient (90deg, hsl(37, 97%, 70%) 0%, hsl(329, 70%, 58%)) 100%;
+$borderYoutube: hsl(348, 97%, 39%);
+
+
+// text color 
+$textRed: hsl(356, 69%, 56%);
+$textGreen: hsl(163, 72%, 41%);

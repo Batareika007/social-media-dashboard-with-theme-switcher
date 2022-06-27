@@ -1,0 +1,39 @@
+.dark-theme-bg{
+    background-color: $dark;
+    color: $white;
+}
+
+.white-theme-bg{
+    background-color: $white;
+    color: $dark;
+}
+
+
+.dark-theme-card-bg{
+    background-color: $darkCardBg;
+    &:hover{
+        background-color: $darkCardBgHover;
+    }
+}
+
+.white-theme-card-bg{
+    background-color: $whiteCardBg;
+    &:hover{
+        background-color: $whiteCardBgHover;
+    }
+}
+
+.dark-theme-text{
+    color: $darkText;
+}
+.white-theme-text{
+    color: $whiteText;
+}
+
+.dark-theme-toggle{
+    background: $darkToggle;
+}
+
+.white-theme-toggle{
+    background: $whiteToggle;
+}

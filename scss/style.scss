@@ -1,0 +1,137 @@
+@import 'normalize';
+@import 'colors';
+@import 'themes';
+
+/* hide scroll bar if needed */
+
+.hide-scroll {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+
+    /* Firefox */
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* remove 'X' from input box to clear the text*/
+
+input::-ms-clear {
+    display: none;
+}
+
+
+/* remove arrow from select */
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    /* text-indent: 1px; */
+    /* text-overflow: ''; */
+}
+
+/** ============ start  custom style ============ */
+
+body{
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+
+
+h1, h2, strong{
+    font-weight: 700;
+    text-transform: capitalize;
+    margin:0;
+}
+
+h1{
+    font-size: 29px;
+    letter-spacing: -1.5%;
+    span{
+        display: inline-block;
+        font-size: 14px;
+    }
+}
+
+.header__flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}    
+
+.toggle{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    &__btn{
+        cursor: pointer;
+        position: relative;
+        padding: 3px;
+        height: 24px;
+        width: 48px;
+        border-radius: 12px;
+        &::after{
+            position: absolute;
+            content: '';
+            width: 18px;
+            height: 18px;
+            background-color: $dark;
+            border-radius: 50%;
+            top: 3px;
+            left: 3px;
+            // right: 3px;
+        }
+    }
+}
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    &__item{
+        text-align: center;
+        flex: 1 0 260px;
+        padding: 25px;
+        &_header{
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+        
+        &_text-big{
+            font-size: 55px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        &_text{
+            letter-spacing: 0.42em;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+        
+        &_footer{
+            color: $textGreen;
+            gap: 4px;
+        }
+    }
+}
+
+
+.container {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+
