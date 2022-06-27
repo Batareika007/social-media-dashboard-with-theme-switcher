@@ -18,6 +18,7 @@
     .attribution {
       font-size: 11px;
       text-align: center;
+      margin-bottom: 2rem;
     }
 
     .attribution a {
@@ -38,7 +39,9 @@
           </h1>
           <div class="toggle">
             <span> Dark Mode</span>
-            <button class="toggle__btn dark-theme-toggle"></button>
+            <button class="toggle__btn dark-theme-toggle" id="toggle">
+              <span class="toggle_ball toggle__ball_dark"></span>
+            </button>
           </div>
         </div>
         <span class="dark-theme-text">
@@ -47,8 +50,8 @@
       </header>
 
       <div class="cards">
-
-        <div class="cards__item dark-theme-card-bg">
+        <!-- facebook -->
+        <div class="cards__item dark-theme-card-bg facebook-card">
           <div class="cards__item_header dark-theme-text flex-center">
             <img src="images/icon-facebook.svg" alt="facebook"> @nathanf
           </div>
@@ -58,27 +61,54 @@
           <div class="cards__item_text dark-theme-text">
             Followers
           </div>
-          <div class="cards__item_footer flex-center">
-            <img src="images/icon-up.svg" alt="" srcset=""> 12 Today
+          <div class="cards__item_footer-green flex-center">
+            <img src="images/icon-up.svg" alt="up arrow"> 12 Today
           </div>
         </div>
-        <div class="cards__item dark-theme-card-bg">
-          @nathanf
-          1044
-          Followers
-          99 Today
+        <!-- twitter -->
+        <div class="cards__item dark-theme-card-bg twitter-card">
+          <div class="cards__item_header dark-theme-text flex-center">
+            <img src="images/icon-twitter.svg" alt="twitter"> @nathanf
+          </div>
+          <div class="cards__item_text-big">
+            1044
+          </div>
+          <div class="cards__item_text dark-theme-text">
+            Followers
+          </div>
+          <div class="cards__item_footer-green flex-center">
+            <img src="images/icon-up.svg" alt="up arrow"> 99 Today
+          </div>
         </div>
-        <div class="cards__item dark-theme-card-bg">
-          @realnathanf
-          11k
-          Followers
-          1099 Today
+        <!-- instagram -->
+        <div class="cards__item dark-theme-card-bg instagram-card">
+          <div class="cards__item_header dark-theme-text flex-center">
+            <img src="images/icon-instagram.svg" alt="instagram"> @realnathanf
+          </div>
+          <div class="cards__item_text-big">
+            11k
+          </div>
+          <div class="cards__item_text dark-theme-text">
+            Followers
+          </div>
+          <div class="cards__item_footer-green flex-center">
+            <img src="images/icon-up.svg" alt="up arrow"> 1099 Today
+          </div>
         </div>
-        <div class="cards__item dark-theme-card-bg">
-          Nathan F.
-          8239
-          Subscribers
-          144 Today
+        <!-- youtube -->
+        <div class="cards__item dark-theme-card-bg youtube-card">
+          <div class="cards__item_header dark-theme-text flex-center">
+            <img src="images/icon-youtube.svg" alt="youtube">Nathan F.
+          </div>
+          <div class="cards__item_text-big">
+            8239
+          </div>
+          <div class="cards__item_text dark-theme-text">
+            subscribers
+          </div>
+          <div class="cards__item_footer-red flex-center">
+            <img src="images/icon-down.svg" alt="down arrow"> 144 Today
+          </div>
         </div>
       </div>
     </section>
@@ -90,50 +120,124 @@
       </h2>
 
       <div class="cards">
-        <div class="cards__item">
-          Page Views
-          87
-          3%
-        </div>
-        <div class="cards__item">
-          Likes
-          52
-          2%
-        </div>
-        <div class="cards__item">
-          Likes
-          5462
-          2257%
+        <!-- facebook -->
+        <div class="cards__item dark-theme-card-bg">
+          <div class="flex-space-between cards__top">
+            <strong class="dark-theme-text">Page Views</strong>
+            <img src="images/icon-facebook.svg" alt="facebook">
+          </div>
+
+          <div class="flex-space-between cards__bottom">
+            <strong>87</strong>
+            <div class="cards__item_footer-green flex-center">
+              <img src="images/icon-up.svg" alt="up arrow"> 3%
+            </div>
+          </div>
         </div>
 
-        <div class="cards__item">
-          Profile Views
-          52k
-          1375%
+        <div class="cards__item dark-theme-card-bg">
+          <div class="flex-space-between cards__top">
+            <strong class="dark-theme-text">Likes</strong>
+            <img src="images/icon-facebook.svg" alt="facebook">
+          </div>
+
+          <div class="flex-space-between cards__bottom">
+            <strong>52</strong>
+            <div class="cards__item_footer-red flex-center">
+              <img src="images/icon-down.svg" alt="down arrow"> 2%
+            </div>
+          </div>
+        </div>
+        <!-- instagram -->
+        <div class="cards__item dark-theme-card-bg">
+          <div class="flex-space-between cards__top">
+            <strong class="dark-theme-text">Likes</strong>
+            <img src="images/icon-instagram.svg" alt="instagram">
+          </div>
+
+          <div class="flex-space-between cards__bottom">
+            <strong>5462</strong>
+            <div class="cards__item_footer-green flex-center">
+              <img src="images/icon-up.svg" alt="up arrow"> 2257%
+            </div>
+          </div>
         </div>
 
-        <div class="cards__item">
-          Retweets
-          117
-          303%
+        <div class="cards__item dark-theme-card-bg">
+          <div class="flex-space-between cards__top">
+            <strong class="dark-theme-text">Profile Views</strong>
+            <img src="images/icon-instagram.svg" alt="instagram">
+          </div>
+
+          <div class="flex-space-between cards__bottom">
+            <strong>52k</strong>
+            <div class="cards__item_footer-green flex-center">
+              <img src="images/icon-up.svg" alt="up arrow">1375%
+            </div>
+          </div>
         </div>
 
-        <div class="cards__item">
-          Likes
-          507
-          553%
+        <!-- twitter -->
+        <div class="cards__item dark-theme-card-bg">
+          <div class="flex-space-between cards__top">
+            <strong class="dark-theme-text">Retweets</strong>
+            <img src="images/icon-twitter.svg" alt="twitter">
+          </div>
+
+          <div class="flex-space-between cards__bottom">
+            <strong>117</strong>
+            <div class="cards__item_footer-green flex-center">
+              <img src="images/icon-up.svg" alt="up arrow">303%
+            </div>
+          </div>
         </div>
 
-        <div class="cards__item">
-          Likes
-          107
-          19%
+
+        <div class="cards__item dark-theme-card-bg">
+          <div class="flex-space-between cards__top">
+            <strong class="dark-theme-text">Likes</strong>
+            <img src="images/icon-twitter.svg" alt="twitter">
+          </div>
+
+          <div class="flex-space-between cards__bottom">
+            <strong>507</strong>
+            <div class="cards__item_footer-green flex-center">
+              <img src="images/icon-up.svg" alt="up arrow">553%
+            </div>
+          </div>
         </div>
-        <div class="cards__item">
-          Total Views
-          1407
-          12%
+
+        <!-- youtube -->
+        <div class="cards__item dark-theme-card-bg">
+          <div class="flex-space-between cards__top">
+            <strong class="dark-theme-text">Likes</strong>
+            <img src="images/icon-youtube.svg" alt="youtube">
+          </div>
+
+          <div class="flex-space-between cards__bottom">
+            <strong>107</strong>
+            <div class="cards__item_footer-red flex-center">
+              <img src="images/icon-down.svg" alt="down arrow"> 19%
+            </div>
+          </div>
         </div>
+
+        <div class="cards__item dark-theme-card-bg">
+          <div class="flex-space-between cards__top">
+            <strong class="dark-theme-text">Likes</strong>
+            <img src="images/icon-youtube.svg" alt="youtube">
+          </div>
+
+          <div class="flex-space-between cards__bottom">
+            <strong>1407</strong>
+            <div class="cards__item_footer-red flex-center">
+              <img src="images/icon-down.svg" alt="down arrow"> 2257%
+            </div>
+          </div>
+        </div>
+
+
+
       </div>
     </section>
 
@@ -143,6 +247,7 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="https://www.frontendmentor.io/profile/Batareika007">Alexei</a>.
   </div>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

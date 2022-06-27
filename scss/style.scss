@@ -39,93 +39,11 @@ select {
 
 /** ============ start  custom style ============ */
 
-body{
+body {
     font-size: 14px;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
 }
-
-
-h1, h2, strong{
-    font-weight: 700;
-    text-transform: capitalize;
-    margin:0;
-}
-
-h1{
-    font-size: 29px;
-    letter-spacing: -1.5%;
-    span{
-        display: inline-block;
-        font-size: 14px;
-    }
-}
-
-.header__flex{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-}    
-
-.toggle{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    &__btn{
-        cursor: pointer;
-        position: relative;
-        padding: 3px;
-        height: 24px;
-        width: 48px;
-        border-radius: 12px;
-        &::after{
-            position: absolute;
-            content: '';
-            width: 18px;
-            height: 18px;
-            background-color: $dark;
-            border-radius: 50%;
-            top: 3px;
-            left: 3px;
-            // right: 3px;
-        }
-    }
-}
-
-.cards{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    &__item{
-        text-align: center;
-        flex: 1 0 260px;
-        padding: 25px;
-        &_header{
-            gap: 10px;
-            margin-bottom: 30px;
-        }
-        
-        &_text-big{
-            font-size: 55px;
-            font-weight: 700;
-            margin-bottom: 15px;
-        }
-        
-        &_text{
-            letter-spacing: 0.42em;
-            text-transform: uppercase;
-            margin-bottom: 15px;
-        }
-        
-        &_footer{
-            color: $textGreen;
-            gap: 4px;
-        }
-    }
-}
-
 
 .container {
     max-width: 1440px;
@@ -134,4 +52,198 @@ h1{
     padding: 0 24px;
 }
 
+h1,
+h2,
+strong {
+    font-weight: 700;
+    text-transform: capitalize;
+    margin: 0;
+}
 
+h1 {
+    font-size: 29px;
+    letter-spacing: -1.5%;
+
+    span {
+        display: inline-block;
+        font-size: 14px;
+    }
+}
+
+h2{
+    margin-bottom: 30px;
+}
+
+.header__flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+header {
+    margin: 46px 0;
+}
+
+.toggle {
+    transition: all ease-in-out 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &__btn {
+        cursor: pointer;
+        position: relative;
+        padding: 3px;
+        height: 24px;
+        width: 48px;
+        border-radius: 12px;
+    }
+}
+
+.toggle_ball {
+    transition: all 0.8s;
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    top: 3px;
+    animation-duration: 0.8s;
+}
+
+.toggle__ball_dark {
+    background-color: $dark;
+    left: 6px;
+    animation-name: todark;
+}
+
+.toggle__ball_white {
+    left: 26px;
+    background-color: $white;
+    animation-name: towhite;
+}
+
+
+@keyframes towhite {
+    0% {
+        left: 6px;
+    }
+
+    25% {
+        left: 1px;
+    }
+
+    100% {
+        left: 26px;
+    }
+}
+
+@keyframes todark {
+    0% {
+        left: 26px;
+    }
+
+    25% {
+        left: 29px
+    }
+
+    100% {
+        left: 6px;
+    }
+}
+
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 50px;
+    &__item {
+        cursor: pointer;
+        text-align: center;
+        flex: 1 0 260px;
+        padding: 25px;
+        border-radius: 4px;
+
+        &_header {
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        &_text-big {
+            font-size: 55px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        &_text {
+            letter-spacing: 0.42em;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        &_footer-green {
+            color: $textGreen;
+            gap: 4px;
+        }
+
+        &_footer-red {
+            color: $textRed;
+            gap: 4px;
+        }
+    }
+}
+
+.facebook-card {
+    border-top: 4px solid $borderFacebook;
+}
+
+.twitter-card {
+    border-top: 4px solid $borderTwitter;
+}
+
+.instagram-card {
+    position: relative;
+    border-top: 4px solid transparent;
+    background-clip: padding-box;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: -4px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        border-radius: 4px;
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+        background: $borderInstagram;
+    }
+}
+
+.youtube-card {
+    border-top: 4px solid $borderYoutube;
+}
+
+// bootom section
+
+.flex-space-between{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cards__top{
+    margin-bottom: 30px;
+}
+
+.cards__bottom{
+    align-items: flex-end;
+    strong{
+        font-size: 33px;
+    }
+}
