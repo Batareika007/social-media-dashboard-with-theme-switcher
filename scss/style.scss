@@ -62,7 +62,7 @@ strong {
 
 h1 {
     font-size: 29px;
-    letter-spacing: -1.5%;
+    letter-spacing: -0.015em;
 
     span {
         display: inline-block;
@@ -253,7 +253,20 @@ header {
     }
 }
 
+
+@media screen and (max-width:1200px) and (min-width: 800px) {
+    .cards__item {
+        flex: 1 0 45%;
+    }
+}
+
+
 @media screen and (max-width:768px) {
+    h1 {
+        font-size: 24px;
+        letter-spacing: 0;
+    }
+
     .header__flex {
         div:first-child {
             width: 100%;

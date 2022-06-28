@@ -63,8 +63,4 @@ function checkColorScheme() {
 
 }
 
-
-
-
-
 checkColorScheme()
