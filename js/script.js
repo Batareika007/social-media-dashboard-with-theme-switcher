@@ -4,16 +4,7 @@ let body_page = document.querySelector('body');
 let card = document.querySelectorAll(".cards__item");
 let textTheme = document.querySelectorAll(".dark-theme-text");
 
-window.matchMedia('(prefers-color-scheme: dark)')
-    .addEventListener('change', event => {
-        if (event.matches) {
-            toDark()
-        } else {
-            toWhite()
-        }
-    })
-
-let toWhite = function () {
+const toWhite = function () {
     toggle_ball.classList.remove('toggle__ball_dark');
     toggle_ball.classList.add('toggle__ball_white');
     toggle.classList.add('white-theme-toggle');
@@ -31,7 +22,7 @@ let toWhite = function () {
     }
 }
 
-let toDark = function () {
+const toDark = function () {
     toggle.classList.remove('white-theme-toggle')
     toggle.classList.add('dark-theme-toggle')
     toggle_ball.classList.remove('toggle__ball_white');
@@ -48,16 +39,32 @@ let toDark = function () {
     }
 }
 
-
-toggle.addEventListener("click", function () {
-    if (toggle_ball.classList.contains('toggle__ball_dark')) {
-        // remove black, Add white 
-        toWhite()
-
-
-    } else {
-        // remove white, Add black
+function checkColorScheme() {
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
         toDark()
-
+        // alert("it's dark mode")
+    } else {
+        // alert("it's light mode")
+        toWhite()
     }
-});
+
+    toggle.addEventListener("click", function () {
+        if (toggle_ball.classList.contains('toggle__ball_dark')) {
+            // remove black, Add white 
+            toWhite()
+
+
+        } else {
+            // remove white, Add black
+            toDark()
+
+        }
+    });
+
+}
+
+
+
+
+
+checkColorScheme()
