@@ -1,7 +1,7 @@
 @import 'normalize';
 @import 'colors';
 @import 'themes';
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 /* hide scroll bar if needed */
 
 .hide-scroll {
@@ -38,6 +38,11 @@ select {
 }
 
 /** ============ start  custom style ============ */
+
+* img {
+    height: auto;
+    width: auto;
+}
 
 body {
     font-size: 14px;
